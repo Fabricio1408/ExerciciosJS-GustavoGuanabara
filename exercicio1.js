@@ -43,3 +43,22 @@ function imc(){
     s = b/(a**2);
     c.innerHTML = `Seu IMC é: ${s.toFixed(2)}, Consulte a tabela abaixo.`
 }
+Claro, aqui está um exemplo simples de código em JavaScript para calcular anagramas:
+//funcao que calcula anagramas 
+function calcularAnagramas(palavra) {
+  if (palavra.length <= 1) {
+    return [palavra];
+  } else {
+    let resultados = [];
+    for (let i = 0; i < palavra.length; i++) {
+      let char = palavra[i];
+      let restante = palavra.substring(0, i) + palavra.substring(i + 1);
+      let anagramasParciais = calcularAnagramas(restante);
+      for (let j = 0; j < anagramasParciais.length; j++) {
+        resultados.push(char + anagramasParciais[j]);
+      }
+    }
+    return resultados;
+  }
+}
+
