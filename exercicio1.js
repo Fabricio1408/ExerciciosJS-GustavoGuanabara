@@ -8,6 +8,7 @@ function somar(){
 
 }
 
+
 function calcular() {
     var num1 = parseFloat(document.getElementById("numero1").value);
     var num2 = parseFloat(document.getElementById("numero2").value);
