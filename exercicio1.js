@@ -8,6 +8,40 @@ function somar(){
 
 }
 
+//Exemplos de funções recursivas: 
+function fatorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * fatorial(n - 1);
+  }
+}
+
+console.log(fatorial(5)); 
+
+function somaAteN(n) {
+  if (n === 1) {
+    return 1;
+  } else {
+    return n + somaAteN(n - 1);
+  }
+}
+
+console.log(somaAteN(5)); 
+
+function somaAteN(n) {
+  if (n === 1) {
+    return 1;
+  } else {
+    return n + somaAteN(n - 1);
+  }
+}
+
+console.log(somaAteN(5)); 
+
+
+
+
 
 function calcular() {
     var num1 = parseFloat(document.getElementById("numero1").value);
