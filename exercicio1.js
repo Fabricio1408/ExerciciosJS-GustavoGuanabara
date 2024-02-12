@@ -38,7 +38,16 @@ function somaAteN(n) {
 }
 
 console.log(somaAteN(5)); 
-
+//Sorteio recursivo:
+function sorteioRecursivo(numeros) {
+  if (numeros.length === 1) {
+    return numeros[0];
+  } else {
+    let indiceAleatorio = Math.floor(Math.random() * numeros.length);
+    let numeroSorteado = numeros.splice(indiceAleatorio, 1)[0];
+    return sorteioRecursivo(numeros);
+  }
+}
 
 
 
